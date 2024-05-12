@@ -63,7 +63,7 @@ function mostrarResultados(){
 //Guarda la encuesta con cada opcion seleccionada en un nuevo array
 function guardarResultados(){
 
-   return encuestaResultados = encuesta.map(function (posicion){
+    resultados = encuesta.map(function (posicion){
     
     return { 
         enunciado:posicion.enunciado,
@@ -71,6 +71,8 @@ function guardarResultados(){
     }
 
     }),
+
+    encuestaResultados.push(resultados)
     console.log('La encuesta ha sido guardada'),
     alert('La encuesta ha sido guardada')
 
