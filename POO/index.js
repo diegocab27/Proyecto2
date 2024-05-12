@@ -4,7 +4,7 @@ class encuesta  {
         this.encuesta = [];
   }
 
-
+//Metodo para crear una encuesta
   crearEncuesta(){
       let contador = 0
       while(contador < 1){
@@ -26,6 +26,7 @@ class encuesta  {
     
   }
 
+  //Metodo para votar Encuestas
   votarEncuesta(){
         let listaOpciones =''
         let voto = 0
@@ -53,8 +54,8 @@ class encuesta  {
      console.log(resultados)
   }
 
-
-  guardarResultados(encuestasGuardadas){
+//Metodo para guardar la encueta votada en el array encuestasGuardadas
+  guardarResultados(){
 
      let resultados = this.encuesta.map(function (posicion){
       return{ 
@@ -62,23 +63,16 @@ class encuesta  {
          opcionElegida:posicion.opcionElegida,
       }
      })
-    encuestasGuardadas.push(resultados)
-    console.log('La encuesta ha sido guardada'),
+     encuestasGuardadas.push(resultados)
+     console.log('La encuesta ha sido guardada'),
      alert('La encuesta ha sido guardada')
  }
   
 }
 
-class encuestaVotada extends encuesta {
-   constructor(resultados){
-   this.resultados = resultados
-   }
 
-}
-
-let encuestasGuardadas
-
+let encuestasGuardadas = []
 
 const encuesta1 = new encuesta (encuesta)
-console.log(encuesta1[0]);
+
 
