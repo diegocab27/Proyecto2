@@ -78,8 +78,8 @@ function guardarResultados(){
 
 }
 
+//arrays de encuestas Guardadas
 let encuestaResultados = []
-
 
 
 
