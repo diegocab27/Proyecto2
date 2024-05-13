@@ -7,7 +7,7 @@ class encuesta  {
 //Metodo para crear una encuesta
   crearEncuesta(){
       let contador = 0
-      while(contador < 1){
+      while(contador < 8){
         contador ++
         let pregunta={
           enunciado:'',
