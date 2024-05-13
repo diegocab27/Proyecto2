@@ -166,3 +166,83 @@ class encuesta  {
   }
 
   ```
+
+#### 2. Metodo `votarEncuesta`
+
+Se crea el metodo `votarEncuesta` y se define a traves de un bucle `while` que muestre las diferentes preguntas con sus opciones y que el usuario pueda votar entre ellas si el voto no es valido le aparecera un mensaje para que lo vuelva a ingresar.
+
+```scss
+//Metodo para votar Encuestas
+  votarEncuesta(){
+        let listaOpciones =''
+        let voto = 0
+        let opcion = 0
+        while ( opcion < this.encuesta.length){
+                listaOpciones = `${this.encuesta[opcion].enunciado}\n Opcion 1.${this.encuesta[opcion].opcion1}\n Opcion 2.${this.encuesta[opcion].opcion2}\n Opcion 3.${this.encuesta[opcion].opcion3}`
+                 voto = parseInt(prompt(`seleccione el numero de su opcion\n ${opcion + 1} ${listaOpciones} `))
+                 if(voto <= 3 && voto > 0){
+                 console.log(voto),
+                 this.encuesta[opcion].opcionElegida = this.encuesta[opcion]["opcion" + voto]
+                 opcion ++
+                 }else{
+                  alert('Opcion no valida vuelva a ingresar')  
+                 }
+        }
+  }
+
+ ```
+
+
+ #### 3. Metodo `mostrarResultados`
+
+Se crea el metodo `mostrarResultados` donde con el metodo `.forEach` recorremos la encuesta mostrando el enunciado con la opcion elegida.
+
+```scss
+
+  //Muestra el resultado actual de la encuesta
+  mostrarResultados(){
+      let resultados =''
+       this.encuesta.forEach(numero => 
+      resultados += `${numero.enunciado}\n voto: ${numero.opcionElegida}\n`
+    )
+     alert(resultados)
+     console.log(resultados)
+  }
+
+ ```
+
+ #### 4. Metodo `guardarResultados`
+
+ Se crea el metodo guardar resultado en que con el metodo `.map` guardamos en una variable `resultados` el enunciado y la opcion elegida para luego con el metodo `.push` la introducimos en el array `encuestasGuardadas` y asi almacenamos las encuestas que vayamos votando.
+
+ ```scss
+  //Muestra el resultado actual de la encuesta
+  mostrarResultados(){
+      let resultados =''
+       this.encuesta.forEach(numero => 
+      resultados += `${numero.enunciado}\n voto: ${numero.opcionElegida}\n`
+    )
+     alert(resultados)
+     console.log(resultados)
+  }
+
+//Metodo para guardar la encueta votada en el array encuestasGuardadas
+  guardarResultados(){
+
+     let resultados = this.encuesta.map(function (posicion){
+      return{ 
+         enunciado:posicion.enunciado,
+         opcionElegida:posicion.opcionElegida,
+      }
+     })
+     encuestasGuardadas.push(resultados)
+     console.log('La encuesta ha sido guardada'),
+     alert('La encuesta ha sido guardada')
+ }
+  
+}
+
+
+let encuestasGuardadas = []
+
+ ```
