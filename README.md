@@ -2,9 +2,9 @@
 
 # PROYECTO 2: Proyecto 2 Sistema de Votación en Javascript
 
-En este proyecto se logra realizar un sistema de votación donde se puede crear un cuestionario con 8 preguntas, cada una con 3 alternativas. El usuario es capaz de votar, ver los resultados en tiempo real y guardar el cuestionario ya votado en un array.
+En este proyecto se logra realizar un sistema de votación, donde se puede crear una encuesta con 8 preguntas, cada una con 3 alternativas. El usuario es capaz de votar, ver los resultados en tiempo real y guardar la encuesta ya votada en un array.
 
-Esto fue desarrollado implementando programación funcional y programación orientada a objetos.
+Esto fue desarrollado, implementando programación funcional y programación orientada a objetos.
 
 ## Autor
 - Diego Cabrera Carrasco  [@diegocab27](https://www.github.com/diegocab27)
